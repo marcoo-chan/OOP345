@@ -1,0 +1,19 @@
+Marco Chan 152215182, OOP345 01/24/2019 (WS2 at home)
+
+1. Topics I learned about in this workshop...
+
+     -Open an external file using built in functions (ifstream, getline) and storing each word. At the same time, save specifically just the word itself and eliminate white spaces by using a getline with a delimeter. Lastly, put that function in a loop so it iterates through each word from beginning to end to be stored into an array. 
+
+     -Used the new std::chrono library to track the amount of time needed to complete each task (execution times)
+
+2. The reason for the significant time difference between the copy and move operations.
+
+     When making a copy of an object, memory will need to be allocated because it is an object. Thus make it expensive and take longer compared to a move operation. 
+
+     Where as in a move, it treats the values of that object as rvalues. The move operator transfers the values to that object by taking the ownership of that data and copying it's pointers and setting them to null afterwards to "clean up". In a sense, transferring the ownership of the data from one object to another.
+
+3. Any issues that caused you difficulty and how you solved them?
+
+     Each word is saved and indexed into an array from whitespace to whitespace. Every word outputted at a specific array was correct except for the last one. That would mean the array and strings saved from whitespace to whitespace was working, but I couldn't quite understand why it was wrong for the last one. That was when I realized that for this one specific array, the counter would have to start from one and not zero. 
+
+     Lastly, I had trouble implementing the built in chrono functions. It was because I hadn't implemented the documentation exactly as what it asked for. Knowing that they are built in functions, everything required would need to be in the program, no more no less to work. Another problem I had was that it would not give me the correct time because I did not assign "std::chrono::duration_cast<std::chrono::milliseconds>"to a new variable of data type "auto".

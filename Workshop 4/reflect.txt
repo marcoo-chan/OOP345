@@ -1,0 +1,13 @@
+Marco Chan 152215182, OOP345 02/11/2020 (WS4 at home)
+
+1. The difference between the implementations of a composition and an aggregation.
+
+     In an aggregation, it is implied that the child can exist independently without the parent.
+     
+     While in a composition, the child cannot exist without the parent. 
+
+2. The difference between the implementations of move and copy functions in a composition and an aggregation.
+
+     In a class that exhibits a composition relationship, where a child cannot exist without the parent, it is not possible to copy or move an object if it were to be deleted. 
+
+     In a class that exhibits an aggregation relationship, where the child CAN exist without the parent, its implementations will change and can be arbitrary depending on the circumstance. Lastly, because the child can go on without the parent, that means the classes within that child have their own lifecycles independant of when the parent's lifecycles go out of scope.

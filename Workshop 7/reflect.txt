@@ -1,0 +1,15 @@
+Q1. List all the STL functions that you have used in this workshop; explain your reasoning for choosing each one, and not another.
+
+std::sort() was used in my "void SongCollection::sort" so that the contents could be sorted specifically by its chosen field such as "title" or "artist". A sorting algorithm was needed in this workshop and this function, thus this built in function was chosen.
+
+std::for_each() was used in my "void SongCollection::cleanAlbum" firstly because we were told not to use loops, secondly loops were not necessary and are impractical for this simple function compared to using this built in function. This function was simple, easy to use and did everything that was required, thus I chose this built in function over any other ones for this "cleanAlbum()" function. All in all, for each line that displayed "[None]" in it's album field, that keyword would be removed. 
+
+std::any_of() was used in "bool inCollection() const" because this built in function allows me to compare or check if any of elements of the objects fulfilled the declared statements. In this case, I receive the names of artists as a parameter and through the use of "any_of" with artists as an argument, I compare it to the collection to see if it contains any songs by that artist. any_of was chosen instead of any other function because I am simply comparing to see if any of that artist exists.
+
+Q2. Present the advantages of using STL algorithms vs. implementing the functionality by yourself using loops.
+
+The biggest advantage of using STL algorithms is that they're already made and reliable. This saves a lot of time rather than coding loops for simple functions. Secondly, implementing the functionality by yourself has possibility for human errors that you miss while implementing other functions down the line. To reiterate, this is a waste of time needed to debug and plan out the code you decide to implement yourself where as you can save all the hassle by using built in readily made STL algorithms. 
+
+Q3. The function that sorts the collection of songs receives as a parameter the field name to use; this can create errors if the client specifies an invalid field (or misspells it). How would you redesign that function to prevent the client to specify an invalid string, allowing any error to be detected by the compiler?
+
+For this workshop, we have 3 constant arguments being album, length and title. If any of them are misspelled an error can arise. That being said, I would change the list of parameters to symbolic constants. Then through an enumeration type, the values can be assigned a constant value. This way, instead of accepting a string, it will only accept the symbolic constant. At the same time, it will yield an error if it tries to pass a different an etity type of the enumerator and or the symbolic constant being misspelled.

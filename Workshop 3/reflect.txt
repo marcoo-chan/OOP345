@@ -1,0 +1,13 @@
+Marco Chan 152215182, OOP345 01/30/2020 (WS3 at home)
+
+1. The reason for specializing the sum() member function.
+
+     Specializing the sum() member function allows us to concatenate a string and a number. Otherwise the program would want to read it as an opportunity to add the numbers together. Usually the sum() function expects a number, but for this workshop, we need it to handle numbers and strings. 
+
+2. The reason for specializing the initial value for a summation.
+
+     The initial value is specialized because there can be different data types. Such that if the first value taken in is an integer, we can initialize it to zero as done in the "at home". Like strings, this is the same by setting it to an empty string. 
+
+3. The reason for defining the class variable outside the class definition.
+
+     The class variable defined outside the class definition, or in other case, the static data member, is defined outside first and foremost because of the "One Definition Rule." That being said, it is defined only ever defined once. For example, our minWidth variable is defined outside the class definition because the value will stay the same and be shared amongst public member functions and free helper functions. 

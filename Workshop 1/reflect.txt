@@ -1,0 +1,19 @@
+Marco Chan 152215182, OOP345 01/21/2019 (WS1 at home)
+
+1. The difference between internal and external linkage using examples from your code.
+
+     Internal linkage, refers to only being accessible inside the scope of a translation unit it is declared in. Identifiers declared in that unit also have the ability to access any other identifiers that have internal linkage. Those identifiers are implemented with the keyword "static" such that they are "static variables". In this case, we made our counter a static so it would continually increment on each action rather than reset.
+
+     External linkage, refers to being outside the scope of a translation unit. This makes it visible to every other translation unit such that it can be accessed anywhere in the program. Furthermore, identifiers with external linkage have the ability to be shared between other translation units. An example of this was declaring "g_sysClock" with the extern keyword in our lab.
+
+2. What are static variables and how were they useful in this workshop.
+
+     Static variables are variables declared with the keyword "static". When given such keyword, they are allocated space and lasts through the liftetime of a program. For this, when that function with the static variable is called multiple times, the space allocated for it is only ever allocated once and carries over into the next function call. This is important to the workshop because the number stored does not change or reset unless programmed to. It keeps track of it's value and increments as needed on every action as shown in this lab.
+
+	When a variable is declared with the static keyword, they are "static variables" such that their allocated memory after initialization remains until the end of the program. When the function is called numerous times, the space given for that specific static variable is only allocated once. The space given, along with the value of that variable in the previous call carries over into the next function call. This is important to the workshop because the number stored does not change or reset unless programmed to. It keeps track of it's value and increments as needed on every action as shown in this lab.
+
+3. The changes that you made in upgrading your Event class.
+
+     -Upgrade event class to manage a C-style null terminated string of any length
+
+	The most logical and efficient change made to upgrade the EVent class to fulfill the requirements above was to give g_sysClock dynamically allocated memory. By doing so, this allows for the char length to be increased whenever such that whenever g_sysClock was looped and increased in value via the main, so would the length. Secondly, to allow it to manage a string of any length, I changed the variable "char * m_desc." In the previous lab, that variable was to only handle up to 128 characters.

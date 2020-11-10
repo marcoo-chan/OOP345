@@ -1,0 +1,8 @@
+Q1. The advantage that smart pointer syntax provides. Use example from your code to support your explanation.
+
+Smart pointers are useful and prove to be an advantage to use compared to raw pointers. Smart pointers like their name are smart enough to manage themselves. A lot of times, we are creating objects allocating memory to them but often times we can forget to "delete" or deallocate their memory. But luckily, smart pointers are a class that wraps a raw pointer which are wrapped inside an object. From then on, when an object gets deleted, a smart pointer will make sure the remains (raw memomry) of that object gets deleted as well.
+
+
+Q2. The difference between raw and smart pointer syntax in your solution.
+
+In "Utilities.cpp", my mergeSmart() function uses a smart pointer. The difference in my mergeSmart() compared to my mergeRaw() is that mergeRaw() needs to manually deallocate any dynamically allocated object when it goes out of scope. Where as in my mergeSmart(), because of the use of a smart pointer, we can gurantee that the object will be deallocated automatically when the pointer goes out of scope. The main difference in the two functions is that mergeSmart uses one line of code to declare a smart pointer. From then on, that smart pointer is smart enough to manage themselves. In a sense that when the object gets destroyed, that pointer is smart enough to clean up the remains and deallocate the memory.

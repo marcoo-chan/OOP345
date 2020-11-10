@@ -1,0 +1,15 @@
+the difference between the implementations/utilizations of a functor and a lambda expression. When is appropriate to use each one?
+
+     The difference is that a lambda function is an anonymous function that is only called once. For this, a lambda function can be syntactically lighter or efficient compared to using a functor.
+
+the constructor for SpellChecker generates an exception in certain conditions. How would you change your code to achieve the same result, but without exceptions (both on the constructor and on the client side)? Compare the two solutions.
+
+     While opening a file through the main function, it is possible for us to check for errors. At the same time, we have built in functions to display errors in 'cerr' as well. 
+
+the classes Movie and Book contain almost identical logic in loading data from the file. How would you redesign the classes in order not to duplicate that logic?
+
+     I would create a parent class where the classes movie and book can be inherited. Through the parent will lie a function that will produce the output that shares the same/similar logic separately. For example, we can call that parent function and it's logic will differ based on the delimeters taken in, such that how many commas (parameters/fields) were recorded. Movie has only three (title, release year, summary) where as Books has five.
+
+the classes Movie and Book are instantiated from the main() function using a custom constructor, but they also contain a default constructor. Is the default constructor necessary? Could you remove it? Justify your answer.
+
+     The default constructor is not needed. The program can still run because the compiler is smart enough to create a default constructor regardless without us having to code it manually. 
